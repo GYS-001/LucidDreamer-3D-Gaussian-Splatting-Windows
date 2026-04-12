@@ -1,0 +1,56 @@
+ModelParams:
+  sh_deg_aug_ratio: 0.0
+  bg_aug_ratio: 0.0
+  shs_aug_ratio: 0.0
+  scale_aug_ratio: 0.0
+  sh_degree: 3
+  source_path: custom_example
+  model_path: ./output_example
+  white_background: True
+  initialize_from_point_e: False
+OptimizationParams:
+  geo_iter: 1400
+  densify_from_iter: 50
+  densify_until_iter: 15000
+  as_latent_ratio: 0.8
+  iterations: 1500
+  position_lr_init: 0.0002
+  position_lr_final: 0.000002
+  position_lr_delay_mult: 0.01
+  position_lr_max_steps: 1200
+  feature_lr: 0.0025
+  opacity_lr: 0.05
+  scaling_lr: 0.005
+  rotation_lr: 0.001
+  densify_grad_threshold: 0.00001
+  max_gaussians: 150000
+  save_iterations: [250, 500, 1000]
+PipelineParams:
+  convert_SHs_python: False
+  compute_cov3D_python: False
+  debug: False
+GenerateCamParams:
+  image_w: 512
+  image_h: 512
+  fovy: 49.1
+  fovx: 49.1
+  znear: 0.01
+  zfar: 100.0
+  use_progressive: False
+GuidanceParams:
+  perpneg_weight: 0.15
+  perpneg: True
+  front_decay_factor: 2.0
+  side_decay_factor: 2.0
+  negative_w: 2.0
+  C_batch_size: 1
+  model_key: D:/python_project/pythonProject/3D/LucidDreamer/models/stable-diffusion-v1-5
+  guidance: SD
+  guidance_scale: 20.0
+  lambda_guidance: 1.0
+  negative_prompt: "blurry, low quality, deformed, ugly, sphere, ball, human, person, head, face, fuzzy"
+port: 6009
+save_video: False
+seed: 0
+device: cuda
+save_process: False
